@@ -38,7 +38,10 @@ vi ~/.pi/agent/models.json
       "api": "openai-completions",
       "apiKey": "ollama",
       "models": [
-        { "id": "qwen3.8:27b-mtp-q4_K_M" }
+        { "id": "qwen3.8:27b-mtp-q4_K_M",
+          "reasoning": true,
+          "contextWindow": 262144
+         }
       ]
     }
   }
