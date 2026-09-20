@@ -1,11 +1,11 @@
 # AI Network Assistant with Pi agent
 
-A local AI assistant for network engineers: the [Pi coding agent](https://pi.dev/) talks to a self-hosted LLM (Ollama, `qwen3.6:35b`) and reaches your Containerlab routers only through a Python MCP server.
+A local AI assistant for network engineers: the [Pi coding agent](https://pi.dev/) talks to a self-hosted LLM (Ollama, `qwen3.8:27b-mtp-q4_K_M`) and reaches your Containerlab routers only through a Python MCP server.
 
 ```
 VS Code (Remote-SSH) -> Ubuntu VM: Pi agent -> MCP server (server.py) -> Containerlab routers
                                        |
-                                       +-> Ollama (remote) : qwen3.6:35b
+                                       +-> Ollama (remote) : qwen3.8:27b-mtp-q4_K_M
 ```
 
 Tested layout: Ubuntu 22.04 or 24.04 VM with Containerlab already installed, connected from VS Code over Remote-SSH. Run all commands below in the VS Code terminal on the VM.
@@ -38,7 +38,7 @@ vi ~/.pi/agent/models.json
       "api": "openai-completions",
       "apiKey": "ollama",
       "models": [
-        { "id": "qwen3.6:35b" }
+        { "id": "qwen3.8:27b-mtp-q4_K_M" }
       ]
     }
   }
